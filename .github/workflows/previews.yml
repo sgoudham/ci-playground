@@ -28,9 +28,6 @@ jobs:
       - name: Generate Flavor Previews
         run: pnpm icons:preview
 
-      - name: Generate Catwalk Preview
-        run: pnpm catwalk
-
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
