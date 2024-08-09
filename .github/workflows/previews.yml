@@ -28,6 +28,17 @@ jobs:
       - name: Generate Flavor Previews
         run: pnpm icons:preview
 
+      - name: Install catppuccin/catwalk
+        shell: bash
+        run: |
+          mkdir /tmp/catwalk
+          cd /tmp/catwalk
+          curl -LSs https://github.com/catppuccin/catwalk/releases/download/v1.3.2/catwalk-x86_64-unknown-linux-gnu -o catwalk
+          echo `pwd` >> $GITHUB_PATH
+
+      - name: Generate Catwalk Preview
+        run: pnpm catwalk
+
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
