@@ -31,8 +31,10 @@ jobs:
         uses: catppuccin-rfc/setup-catwalk@main
       
       - run: |
-          stat /tmp/catwalk
+          stat /tmp/catppuccin
+          stat /tmp/catppuccin/catwalk
           ls -la /tmp
+          ls -la /private/tmp
 
       - name: Generate Catwalk Preview
         run: pnpm catwalk
