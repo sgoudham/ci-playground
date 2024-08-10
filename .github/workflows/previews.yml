@@ -29,6 +29,10 @@ jobs:
 
       - name: Install catppuccin/catwalk
         uses: catppuccin-rfc/setup-catwalk@main
+      
+      - run: |
+          stat /tmp/catwalk
+          ls -la /tmp
 
       - name: Generate Catwalk Preview
         run: pnpm catwalk
