@@ -24,17 +24,11 @@ jobs:
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
 
-      - name: Generate Flavor Previews
-        run: pnpm icons:preview
+      # - name: Generate Flavor Previews
+      #   run: pnpm icons:preview
 
       - name: Install catppuccin/catwalk
-        shell: bash
-        run: |
-          mkdir /tmp/catwalk
-          cd /tmp/catwalk
-          curl -LSs https://github.com/catppuccin/catwalk/releases/download/v1.3.2/catwalk-aarch64-apple-darwin -o catwalk
-          chmod +x catwalk
-          echo `pwd` >> $GITHUB_PATH
+        uses: catppuccin-rfc/setup-catwalk@main
 
       - name: Generate Catwalk Preview
         run: pnpm catwalk

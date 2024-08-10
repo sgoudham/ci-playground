@@ -4,8 +4,6 @@ on:
   push:
     branches: [notmain]
     tags-ignore: [v*]
-  pull_request:
-    branches: [main]
 
 env:
   PUPPETEER_SKIP_DOWNLOAD: true
