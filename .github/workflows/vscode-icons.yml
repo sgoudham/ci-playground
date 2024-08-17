@@ -1,0 +1,8 @@
+name: Update vscode-icons
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update:
+    uses: catppuccin-rfc/actions/.github/workflows/vscode-icons.yml@main
