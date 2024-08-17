@@ -1,0 +1,3 @@
+[submodule "testing/nested/vscode-icons"]
+	path = testing/nested/vscode-icons
+	url = https://github.com/catppuccin/vscode-icons.git
